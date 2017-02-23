@@ -1,0 +1,10 @@
+<a th:href="*{url}" th:class="'c-block-tile c-block-tile--'+${styleModifier}">
+	<th:block th:if="*{progress}">
+		<div th:replace="atoms-progress"></div>
+	</th:block>
+	<span class="c-block-tile__value" th:utext="*{number}">number</span>
+	<h2 class="c-block-tile__label" th:utext="*{headline.short}">headline.short</h2>
+</a><!-- end c-block-tile -->
+<th:block th:if="*{overlay}">
+	<div th:replace="molecules-overlay"></div>
+</th:block>

@@ -1,0 +1,16 @@
+<div class="c-tile-grid">
+	<div class="c-tile-grid__inner l">
+
+		<!--/* top-level */-->
+		<th:block th:if="${blockFeature}" th:object="${blockFeature}">
+			<div class="c-tile-grid__primary">
+				<div th:replace="molecules-block-tile"></div>
+			</div><!--end c-tile-grid__primary-->
+		</th:block>
+
+		<div class="c-tile-grid__secondary">
+			<div th:replace="organisms-tile-list"></div>
+		</div><!--end c-tile-grid__secondary-->
+
+	</div><!--end l-->
+</div><!--end c-tile-grid-->

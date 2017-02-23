@@ -1,0 +1,5 @@
+<ul class="c-media-list">
+	<th:block th:if="*{mediaList}" th:each="media:*{mediaList}" th:object="*{media}">
+		<li class="c-media-list__item"><div th:replace="molecules-block-media"></div></li>
+	</th:block>
+</ul>

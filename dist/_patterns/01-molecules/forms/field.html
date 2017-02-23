@@ -1,0 +1,6 @@
+<!-- TODO check correctness -->
+<div class="c-field" th:if="${field}" th:object="${field}">
+	<label th:for="*{id}" class="c-field__label" th:utext="*{label}">Label</label>
+	<input th:id="*{id}" th:type="*{type}" th:placeholder="*{placeholder}" value="" th:value="*{value}" />
+	<span th:if="*{fieldNote}" class="c-field__note" th:utext="*{fieldNote}">Field Note</span>
+</div><!--end c-field-->

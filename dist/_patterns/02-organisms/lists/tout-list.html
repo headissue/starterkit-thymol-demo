@@ -1,0 +1,7 @@
+<ul class="c-tout-list g g-3up">
+	<th:block th:if="${toutList}" th:each="tout:${toutList}" th:object="${tout}">
+		<li class="c-tout-list__item gi">
+			<div th:replace="molecules-block-tout"></div>
+		</li>
+	</th:block>
+</ul><!--end tout-list-->

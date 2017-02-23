@@ -1,0 +1,11 @@
+<nav class="c-footer-nav">
+
+	<ul class="c-footer-nav__list">
+
+		<th:block th:if="${footerNav}" th:each="f:${footerNav}">
+			<li class="c-footer-nav__item"><a href="${f.url}" class="c-footer-nav__link" th:utext="*{f.label}">label</a></li>
+		</th:block>
+
+	</ul><!--end c-footer-nav__list-->
+
+</nav><!--end c-footer-nav-->

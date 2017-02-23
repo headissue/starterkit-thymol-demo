@@ -1,0 +1,5 @@
+<ol class="pagination">
+	<th:block th:if="${paginationList}" th:each="e:${paginationList}">
+		<li class="pagination__item"><a href="${e.url}" th:utext="*{e.number}">e.number</a></li>
+	</th:block>
+</ol>

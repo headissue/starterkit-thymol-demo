@@ -1,0 +1,14 @@
+<section class="c-section">
+	<h2 th:if="*{sectionTitle}" class="c-section__title" th:utext="*{sectionTitle}">sectionTitle</h2>
+
+	<div th:replace="organisms-media-list"></div>
+	<th:block th:if="*{textButton}" th:object="*{textButton}">
+		<div th:replace="atoms-text-button"></div>
+	</th:block>
+	<th:block th:if="*{pagination}" th:object="*{pagination}">
+		<div th:replace="molecules-pagination"></div>
+	</th:block>
+	<th:block th:if="*{overlay}" th:object="*{overlay}">
+		<div th:replace="molecules-overlay"></div>
+	</th:block>
+</section><!--end section-->

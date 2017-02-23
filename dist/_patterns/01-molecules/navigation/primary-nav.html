@@ -1,0 +1,11 @@
+<nav id="nav" class="c-primary-nav">
+
+	<ul class="c-primary-nav__list">
+
+		<th:block th:if="${primaryNav}" th:each="n:${primaryNav}" th:object="${n}">
+			<li class="c-primary-nav__item"><a href="*{url}" class="c-primary-nav__link" th:utext="*{label}">label</a></li>
+		</th:block>
+
+	</ul><!--end c-primary-nav__list-->
+
+</nav><!--end c-primary-nav-->

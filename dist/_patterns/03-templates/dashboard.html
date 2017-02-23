@@ -1,0 +1,27 @@
+<div th:replace="organisms-header"></div>
+<main role="main">
+	<th:block th:if="${alert}" th:object="${alert}">
+		<div th:replace="molecules-alert"></div>
+	</th:block>
+
+	<th:block th:if="${sectionBlock}" th:object="${sectionBlock}">
+
+	<div th:replace="organisms-tile-grid"></div>
+
+	</th:block>
+
+	<div class="l l--two-col">
+		<div class="l-main">
+			<th:block th:if="${featuredChallenges}" th:object="${featuredChallenges}">
+				<div th:replace="organisms-section-media-list"></div>
+			</th:block>
+		</div><!--end .l-main-->
+
+		<div class="l-sidebar">
+			<th:block th:if="${featuredPeople}" th:object="${featuredPeople}">
+				<div th:replace="organisms-section-media-list"></div>
+			</th:block>
+		</div><!--end .l-sidebar-->
+	</div><!--end .l-two-col-->
+</main>
+<div th:replace="organisms-footer"></div>

@@ -1,0 +1,16 @@
+<form class="c-form c-form--stacked" method="post" th:action="${link.pages-dashboard}">
+	<th:block th:if="*{formTitle}">
+		<h2 class="c-form__title c-section__title" th:utext="*{formTitle}">formTitle</h2>
+	</th:block>
+	<th:block th:if="*{fields}" th:each="field:*{fields}" th:object="${field}">
+		<div th:replace="molecules-field"></div>
+	</th:block>
+
+	<th:block th:if="*{textarea}">
+		<div th:replace="molecules-textarea"></div>
+	</th:block>
+
+	<div class="c-form__actions">
+		<div th:replace="atoms-button"></div>
+	</div>
+</form><!--end c-form-stacked-->

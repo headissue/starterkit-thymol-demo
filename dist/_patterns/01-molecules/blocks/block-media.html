@@ -1,0 +1,11 @@
+<a th:href="*{url}" th:class="'c-block-media c-block-media--'+${styleModifier}">
+
+	<div class="c-block-media__media">
+		<th:block th:with="styleModifier='c-block-media__img'"><div th:replace="atoms-square"></div></th:block>
+	</div>
+
+	<div class="c-block-media__body">
+		<h2 class="c-block-media__headline" th:utext="*{headline.short}">Short headline</h2>
+		<p class="c-block-media__excerpt" th:utext="*{excerpt.medium}">Medium excerpt</p>
+	</div><!-- end c-block-media__body -->
+</a><!-- end c-block-media -->

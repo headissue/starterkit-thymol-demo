@@ -1,0 +1,7 @@
+<ul class="c-tile-list">
+	<th:block th:if="*{tileList}" th:each="tile:*{tileList}" th:object="*{tile}">
+		<li class="c-tile-list__item">
+			<div th:replace="molecules-block-tile"></div>
+		</li>
+	</th:block>
+</ul><!--end tout-list-->
